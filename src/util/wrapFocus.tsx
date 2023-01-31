@@ -5,7 +5,8 @@ function createFocusWalker(root: HTMLElement) {
       // runtime's understanding of tabbability, so this automatically accounts
       // for any kind of element that could be tabbed to.
       // @ts-ignore
-      node.tabIndex >= 0 && !node.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
+      // node.tabIndex >= 0 && !node.disabled && node.getBoundingClientRect().height > 0 ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
+      node.tabIndex >= 0 && !node.disabled && node.getBoundingClientRect().height > 0 && window.getComputedStyle(node).visibility === 'visible' ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP,
   });
 }
 

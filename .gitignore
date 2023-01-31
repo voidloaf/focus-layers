@@ -3,3 +3,4 @@ node_modules
 .rts2_cache_*
 .cache
 dist
+.DS_Store

@@ -9,11 +9,16 @@ import ExplicitReturnExample from "./ExplicitReturnExample";
 import LayeringExample from "./LayeringExample";
 import FreeFocusToggleExample from "./FreeFocusToggleExample";
 import SubscriptionExample from "./SubscriptionExample";
+import BugTestCase from "./BugTestCase";
 
 function Index() {
   return (
     <div>
       <FocusGuard />
+
+      <BugTestCase />
+
+      <hr/>
 
       <p>
         This page shows a few ways that <code>focus-layers</code> can be used. This page also
